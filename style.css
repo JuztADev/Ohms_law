@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --background-title: #240A34;
+    --letter-color: #FFEDD8;
+    --select-option: #891652;
+    --background-content: #EABE6C;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+body, html{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+header{
+    background-color: var(--background-title);
+    width: 100%;
+    height: 62px;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    background-color: var(--background-title);
+    height: 100%;
+    color: var(--letter-color);
+}
+.container {
+    display: flex;
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+    padding: 15px 10px 10px;
+    background-color:var(--background-content);
+}
+
+.container .selector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.selector select{
+    position: relative;
+    background-color: var(--select-option);
+    color: var(--letter-color);
+    font-size: 18px;
+
+}
+
+.selector select option{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.title {
+    margin: 15px;
+    width: auto;
+    height: 40px;
+}
+.title h2 {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    margin: 0 0 10px;
+
+}
+.form-container div{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.form-container div label{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+
+.form-container div div {
+    width: 100%;
+
+}
+.form-container div div input{
+    width: 210px;
+    height: 30px;
+    padding: 2px;
+    border: none;
+    margin-bottom: 5px;
+}
+
+.form-container div div input:focus{
+    border: 4px solid var(--background-title);
+    background-color: var(--letter-color);
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.btn{
+    height: 40px;
+    font-size: 18px;
+    padding: 0 4px;
+    border: none;
+    border-radius: 6px;
+    color: var(--letter-color);
+}
+.btn:disabled{
+    background-color: rgba(137, 22, 82, 0.3);
+}
+.clear-btn{
+    background-color: var(--select-option);
+}
+.submit-btn{
+    background-color: var(--select-option);
+}
+
+.contenido{
+    margin: 10px 0;
+}
+.contenido h3 {
+    text-align: center;
+    margin: 5px 0;
+
+}
+.contenido p{
+    text-align: center;
+}
+
+.canva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width:768px) {
+    body, html{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        
+    }
+    .container{
+        display: grid;
+        grid-template-columns: minmax(300px, 450px) auto;
+        grid-template-rows: auto auto auto auto  ;
+        height: 100%;
+    }
+    .selector{
+        grid-column: 1/3;
+    }
+    .title{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .form-container{
+        grid-column: 1/2;
+    }
+    .btn-container{
+        grid-column: 1/2;
+    }
+    .contenido{
+        grid-row: 2/5;
+    }
+}
